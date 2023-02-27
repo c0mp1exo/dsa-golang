@@ -1,12 +1,17 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	res := getMazePathWithJump(0, 0, 3, 3)
+	for _, r := range res {
+		fmt.Printf("%s\n", r)
+	}
 }
 
 func getMazePathWithJump(sr, sc, dr, dc int) []string {
 
-	if sc > dc && sr > dr {
+	if sc > dc || sr > dr {
 		return *new([]string)
 	}
 	if sc == dc && sr == dr {

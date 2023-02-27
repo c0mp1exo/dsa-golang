@@ -3,7 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	ans := getStairsPath(3)
+	fmt.Printf("Enter your current position : ")
+	var cp int
+	fmt.Scanf("%d\n", &cp)
+	ans := getStairsPath(cp)
 	for _, a := range ans {
 		fmt.Printf("%s\n", a)
 	}

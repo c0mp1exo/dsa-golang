@@ -3,7 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	res := getMazePath(0, 0, 3, 3)
+	fmt.Printf("Enter start index of yours : ")
+	var sr, sc int
+	fmt.Scanf("%d%d\n", &sr, &sc)
+	fmt.Printf("Enter start index of yours : ")
+	var dr, dc int
+	fmt.Scanf("%d%d\n", &dr, &dc)
+
+	res := getMazePath(sr, sc, dr, dc)
+	fmt.Printf("Possible ways for you are ...  ")
 	for _, val := range res {
 		fmt.Printf("%s\n", val)
 	}
